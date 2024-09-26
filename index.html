@@ -8,6 +8,7 @@
   <title>Steven - Programador Web</title>
   <link rel="icon" type="image/svg+xml" href="/logo_lp.svg" />
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
 </head>
 
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
@@ -26,7 +27,7 @@
 </header>
 
 <!-- Hero Section -->
-<section class="bg-cover bg-center py-20" style="background-image: url(public/portada.jpg)">
+<section class="bg-cover bg-center py-20" style="background-image: url(public/portada.jpg)" data-aos="fade-up">
   <div class="container mx-auto text-center text-white bg-black bg-opacity-50 p-10 rounded-lg">
     <h2 class="text-4xl font-bold mb-6">Programador Web Creatiu i Dinàmic</h2>
     <p class="text-lg mb-6">Tinc un alt coneixement d'HTML i CSS, així com un nivell mitjà en Javascript i Python. A més, estic especialitzat en bases de dades com Oracle i MySQL.</p>
@@ -35,7 +36,7 @@
 </section>
 
 <!-- Sobre Mi Section -->
-<section id="about" class="bg-gray-100 py-20">
+<section id="about" class="bg-gray-100 py-20" data-aos="fade-right">
   <div class="container mx-auto">
     <h3 class="text-3xl font-bold text-center mb-12">Sobre Mi</h3>
     <div class="flex flex-wrap justify-center">
@@ -49,12 +50,12 @@
 </section>
 
 <!-- Habilitats Section -->
-<section id="skills" class="bg-white py-20">
+<section id="skills" class="bg-white py-20" data-aos="fade-up">
   <div class="container mx-auto">
     <h3 class="text-3xl font-bold text-center mb-12">Les Meves Habilitats</h3>
     <div class="flex flex-wrap justify-center gap-6"> <!-- Añadido gap-6 -->
       <!-- Skill 1: HTML & CSS -->
-      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-8">
+      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-8" data-aos="zoom-in">
         <div class="bg-black bg-opacity-20 p-6 rounded-lg">
           <div class="flex justify-center items-center">
             <img src="public/html_css.png" alt="html_css" class="max-w-full h-auto" style="max-width: 140px;">
@@ -64,7 +65,7 @@
         </div>
       </div>
       <!-- Skill 2: Javascript -->
-      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-8">
+      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-8" data-aos="zoom-in">
         <div class="bg-black bg-opacity-20 p-6 rounded-lg">
           <div class="flex justify-center items-center">
             <img src="public/javascript.png" alt="javascript" class="max-w-full h-auto" style="max-width: 140px;">
@@ -74,7 +75,7 @@
         </div>
       </div>
       <!-- Skill 3: Python -->
-      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-8">
+      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-8" data-aos="zoom-in">
         <div class="bg-black bg-opacity-20 p-6 rounded-lg">
           <div class="flex justify-center items-center">
             <img src="public/python.png" alt="python" class="max-w-full h-auto" style="max-width: 140px;">
@@ -84,7 +85,7 @@
         </div>
       </div>
       <!-- Skill 4: Bases de Dades -->
-      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-8">
+      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-8" data-aos="zoom-in">
         <div class="bg-black bg-opacity-20 p-6 rounded-lg">
           <div class="text-red-500 text-6xl mb-4">
             &#128202;
@@ -94,7 +95,7 @@
         </div>
       </div>
       <!-- Skill 5: Instal·lació i Manteniment d'Equips -->
-      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-8">
+      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-8" data-aos="zoom-in">
         <div class="bg-black bg-opacity-20 p-6 rounded-lg">
           <div class="text-indigo-500 text-6xl mb-4">
             &#128187;
@@ -108,68 +109,87 @@
 </section>
 
 <!-- Secció de Plans -->
-<section id="plans" class="bg-white py-20">
+<section id="plans" class="bg-white py-20" data-aos="fade-up">
   <div class="container mx-auto">
     <h3 class="text-3xl font-bold text-center mb-12">Els Meus Plans</h3>
     <div class="flex flex-wrap justify-center">
 
       <!-- Pla Bàsic -->
-      <div class="w-full sm:w-1/2 lg:w-1/3 text-center p-6 bg-gray-100 border border-gray-300 rounded-lg m-4">
+      <div class="w-full sm:w-1/2 lg:w-1/3 text-center p-6 bg-gray-100 border border-gray-300 rounded-lg m-4" data-aos="fade-up">
         <h4 class="text-xl font-bold mb-4">Pla Bàsic</h4>
         <p class="text-lg mb-4">Ideal per a petites pàgines web o projectes senzills.</p>
         <p class="text-4xl font-bold text-blue-500 mb-6">€99</p>
         <ul class="mb-6 text-gray-700">
-          <li>Fins a 5 pàgines web</li>
-          <li>Responsive Design</li>
-          <li>Suport bàsic</li>
+          <li class="mb-2">✔️ Disseny responsiu</li>
+          <li class="mb-2">✔️ 3 seccions</li>
+          <li class="mb-2">✔️ Suport tècnic</li>
         </ul>
-        <a href="#contact" class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 transition duration-300">Contracta</a>
+        <a href="#contact" class="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition duration-300">Contracta Ara</a>
       </div>
 
-      <!-- Pla Estàndard -->
-      <div class="w-full sm:w-1/2 lg:w-1/3 text-center p-6 bg-gray-100 border border-gray-300 rounded-lg m-4">
-        <h4 class="text-xl font-bold mb-4">Pla Estàndard</h4>
-        <p class="text-lg mb-4">Perfecte per a empreses que necessiten una pàgina web completa.</p>
+      <!-- Pla Professional -->
+      <div class="w-full sm:w-1/2 lg:w-1/3 text-center p-6 bg-gray-100 border border-gray-300 rounded-lg m-4" data-aos="fade-up">
+        <h4 class="text-xl font-bold mb-4">Pla Professional</h4>
+        <p class="text-lg mb-4">Per a negocis que necessiten presència en línia.</p>
         <p class="text-4xl font-bold text-blue-500 mb-6">€199</p>
         <ul class="mb-6 text-gray-700">
-          <li>Fins a 10 pàgines web</li>
-          <li>Responsive Design i SEO</li>
-          <li>Suport estàndard</li>
+          <li class="mb-2">✔️ Disseny personalitzat</li>
+          <li class="mb-2">✔️ 5 seccions</li>
+          <li class="mb-2">✔️ Suport tècnic prioritari</li>
         </ul>
-        <a href="#contact" class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 transition duration-300">Contracta</a>
+        <a href="#contact" class="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition duration-300">Contracta Ara</a>
       </div>
 
-      <!-- Pla Premium -->
-      <div class="w-full sm:w-1/2 lg:w-1/3 text-center p-6 bg-gray-100 border border-gray-300 rounded-lg m-4">
-        <h4 class="text-xl font-bold mb-4">Pla Premium</h4>
-        <p class="text-lg mb-4">Per a projectes grans que necessiten funcionalitats avançades.</p>
+      <!-- Pla Avançat -->
+      <div class="w-full sm:w-1/2 lg:w-1/3 text-center p-6 bg-gray-100 border border-gray-300 rounded-lg m-4" data-aos="fade-up">
+        <h4 class="text-xl font-bold mb-4">Pla Avançat</h4>
+        <p class="text-lg mb-4">Per a projectes grans amb necessitats especials.</p>
         <p class="text-4xl font-bold text-blue-500 mb-6">€299</p>
         <ul class="mb-6 text-gray-700">
-          <li>Pàgines il·limitades</li>
-          <li>Responsive Design, SEO i Optimització</li>
-          <li>Suport Premium</li>
+          <li class="mb-2">✔️ Disseny exclusiu</li>
+          <li class="mb-2">✔️ Nombre il·limitat de seccions</li>
+          <li class="mb-2">✔️ Suport tècnic 24/7</li>
         </ul>
-        <a href="#contact" class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 transition duration-300">Contracta</a>
+        <a href="#contact" class="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition duration-300">Contracta Ara</a>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- Contacte Section -->
-<section id="contact" class="bg-gray-800 py-20 text-white">
-  <div class="container mx-auto text-center">
-    <h3 class="text-3xl font-bold mb-6">Contacta amb mi</h3>
-    <p class="mb-6">Si tens alguna pregunta o vols treballar amb mi, no dubtis a contactar-me!</p>
-    <a href="mailto:teuemail@example.com" class="bg-blue-500 py-2 px-6 rounded-full hover:bg-blue-600 transition duration-300">Envia'm un correu</a>
+<!-- Contact Section -->
+<section id="contact" class="bg-gray-100 py-20" data-aos="fade-up">
+  <div class="container mx-auto">
+    <h3 class="text-3xl font-bold text-center mb-12">Contacte'm</h3>
+    <form action="#" method="POST" class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+      <div class="mb-4">
+        <label for="name" class="block text-gray-700">Nom:</label>
+        <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded" required>
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700">Correu electrònic:</label>
+        <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded" required>
+      </div>
+      <div class="mb-4">
+        <label for="message" class="block text-gray-700">Missatge:</label>
+        <textarea id="message" name="message" rows="4" class="w-full p-2 border border-gray-300 rounded" required></textarea>
+      </div>
+      <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition duration-300">Enviar</button>
+    </form>
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-gray-900 py-6 text-center text-gray-500">
-  <p>&copy; 2024 Steven. Tots els drets reservats.</p>
+<footer class="bg-gray-800 text-white py-6 text-center">
+  <p>© 2024 Steven - Tots els drets reservats.</p>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // Duració de l'animació en milisegons
+  });
+</script>
 </body>
 
 </html>
