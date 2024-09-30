@@ -13,18 +13,50 @@
 
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
 <!-- Header -->
-<header class="bg-gray-800 text-white">
+<header class="bg-gray-800 text-white" x-data="{ menuOpen: false }">
   <div class="container mx-auto flex justify-between items-center py-6">
     <div class="w-20 h-10">
       <a href="#intro"><img src="public/steven.png" alt="Logo"></a>
     </div>
-    <nav>
+
+    <!-- Botó de menú per a mòbil -->
+    <button @click="menuOpen = !menuOpen" class="lg:hidden text-white focus:outline-none">
+      <!-- Icona de menú "hamburger" quan el menú està tancat -->
+      <template x-if="!menuOpen">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </template>
+
+      <!-- Icona de tancament "X" quan el menú està obert -->
+      <template x-if="menuOpen">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </template>
+    </button>
+
+    <!-- Menú de navegació (desktop) -->
+    <nav class="hidden lg:flex">
       <a href="#about" class="mx-4 text-gray-400 hover:text-white">Sobre mi</a>
       <a href="#skills" class="mx-4 text-gray-400 hover:text-white">Habilitats</a>
+      <a href="#plans" class="mx-4 text-gray-400 hover:text-white">Plans</a>
       <a href="#contact" class="mx-4 text-gray-400 hover:text-white">Contacte</a>
     </nav>
+
+    <!-- Menú desplegable (mòbil) -->
+    <div x-show="menuOpen" @click.away="menuOpen = false" class="lg:hidden absolute top-16 left-0 w-full bg-gray-800 shadow-lg z-10">
+      <nav class="flex flex-col items-center py-4 space-y-4">
+        <a href="#about" class="text-gray-400 hover:text-white" @click="menuOpen = false">Sobre mi</a>
+        <a href="#skills" class="text-gray-400 hover:text-white" @click="menuOpen = false">Habilitats</a>
+        <a href="#plans" class="text-gray-400 hover:text-white" @click="menuOpen = false">Plans</a>
+        <a href="#contact" class="text-gray-400 hover:text-white" @click="menuOpen = false">Contacte</a>
+      </nav>
+    </div>
   </div>
 </header>
+
+
 
 <!-- Hero Section -->
 <section class="bg-cover bg-center py-20" style="background-image: url(public/portada.jpg)" data-aos="fade-up">
@@ -180,9 +212,40 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-gray-800 text-white py-6 text-center">
-  <p>© 2024 Steven - Tots els drets reservats.</p>
+<footer class="bg-gray-800 text-white py-10">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Secció sobre mi (a l'esquerra) -->
+    <div class="w-full md:w-1/2 text-left mb-6 md:mb-0">
+      <h4 class="text-xl font-bold mb-4">Sobre Mi</h4>
+      <p class="text-gray-400">
+        Sóc Steven, un programador web apassionat per la creació de llocs web dinàmics i atractius. Amb experiència en HTML, CSS, Javascript, Python i bases de dades, m'especialitzo en oferir solucions tecnològiques efectives. Sempre busco nous reptes per millorar les meves habilitats.
+      </p>
+    </div>
+
+    <!-- Secció de xarxes socials (a la dreta) -->
+    <div class="w-full md:w-1/2 text-right">
+      <h4 class="text-xl font-bold mb-4">Segueix-me a les Xarxes Socials</h4>
+      <div class="flex justify-end space-x-6">
+        <a href="https://www.linkedin.com/in/steven-romero-6a72b820b/" target="_blank" class="text-gray-400 hover:text-white">
+          <img src="public/linkedin-icon.png" alt="LinkedIn" class="w-6 h-6 inline-block">
+        </a>
+        <a href="https://github.com/ManuelSteven21" target="_blank" class="text-gray-400 hover:text-white">
+          <img src="public/github-icon.png" alt="GitHub" class="w-6 h-6 inline-block">
+        </a>
+        <a href="https://x.com/steven_21_2004" target="_blank" class="text-gray-400 hover:text-white">
+          <img src="public/twitter-icon.png" alt="Twitter" class="w-6 h-6 inline-block">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="mt-6 text-center">
+    <p class="text-gray-500">© 2024 Steven - Tots els drets reservats.</p>
+  </div>
 </footer>
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
 <script>
@@ -190,6 +253,7 @@
     duration: 1000, // Duració de l'animació en milisegons
   });
 </script>
+<script type="module" src="/main.js"></script>
 </body>
 
 </html>
