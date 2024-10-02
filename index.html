@@ -14,7 +14,7 @@
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
 <!-- Header -->
 <header class="bg-gray-800 text-white" x-data="{ menuOpen: false }">
-  <div class="container mx-auto flex justify-between items-center py-6">
+  <div class="container mx-auto flex justify-between items-center py-6 px-4 sm:px-6 lg:px-8">
     <div class="w-20 h-10">
       <a href="#intro"><img src="public/steven.png" alt="Logo"></a>
     </div>
@@ -41,6 +41,8 @@
       <a href="#about" class="mx-4 text-gray-400 hover:text-white">Sobre mi</a>
       <a href="#skills" class="mx-4 text-gray-400 hover:text-white">Habilitats</a>
       <a href="#plans" class="mx-4 text-gray-400 hover:text-white">Plans</a>
+      <a href="#preguntes" class="mx-4 text-gray-400 hover:text-white">Preguntes</a>
+      <a href="#opinions" class="mx-4 text-gray-400 hover:text-white">Opinions</a>
       <a href="#contact" class="mx-4 text-gray-400 hover:text-white">Contacte</a>
     </nav>
 
@@ -50,44 +52,52 @@
         <a href="#about" class="text-gray-400 hover:text-white" @click="menuOpen = false">Sobre mi</a>
         <a href="#skills" class="text-gray-400 hover:text-white" @click="menuOpen = false">Habilitats</a>
         <a href="#plans" class="text-gray-400 hover:text-white" @click="menuOpen = false">Plans</a>
+        <a href="#preguntes" class="text-gray-400 hover:text-white" @click="menuOpen = false">Preguntes</a>
+        <a href="#opinions" class="text-gray-400 hover:text-white" @click="menuOpen = false">Opinions</a>
         <a href="#contact" class="text-gray-400 hover:text-white" @click="menuOpen = false">Contacte</a>
       </nav>
     </div>
   </div>
 </header>
 
-
-
 <!-- Hero Section -->
-<section class="bg-cover bg-center py-20" style="background-image: url(public/portada.jpg)" data-aos="fade-up">
-  <div class="container mx-auto text-center text-white bg-black bg-opacity-50 p-10 rounded-lg">
+<section class="bg-cover bg-center py-20"  style="background-image: url(public/portada.jpg)" data-aos="fade-up">
+  <div class="container mx-auto px-4 sm:px-6">
+  <div class="container mx-auto text-center text-white bg-black bg-opacity-50 p-10 sm:p-12 md:p-16 lg:p-20 rounded-lg  mx-auto px-4 sm:px-6">
     <h2 class="text-4xl font-bold mb-6">Programador Web Creatiu i Dinàmic</h2>
     <p class="text-lg mb-6">Tinc un alt coneixement d'HTML i CSS, així com un nivell mitjà en Javascript i Python. A més, estic especialitzat en bases de dades com Oracle i MySQL.</p>
     <a href="#contact" class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 transition duration-300">Contacta'm</a>
   </div>
+  </div>
 </section>
 
+
 <!-- Sobre Mi Section -->
-<section id="about" class="bg-gray-100 py-20" data-aos="fade-right">
+<section id="about" class="scroll-mt-20 bg-gray-100 py-10 md:py-20 px-4 md:px-0" data-aos="fade-right">
   <div class="container mx-auto">
-    <h3 class="text-3xl font-bold text-center mb-12">Sobre Mi</h3>
-    <div class="flex flex-wrap justify-center">
-      <div class="w-full md:w-3/4 lg:w-1/2 text-center">
-        <p class="text-gray-700 text-lg mb-6">Sóc un professional amb experiència tant en programació web com en instal·lació i manteniment d'equips i servidors.</p>
-        <p class="text-gray-700 text-lg mb-6">Tinc estudis en SMX (Sistemes Microinformàtics en Xarxa) i ASIX (Administració de Sistemes Informàtics en Xarxa, perfil de ciberseguretat). A més, m'he especialitzat en desenvolupament d'aplicacions multiplataforma amb el cicle superior de DAM, que és la meva àrea d'especialització i el que més vull potenciar professionalment.</p>
-        <p class="text-gray-700 text-lg mb-6">Amb un alt domini d'HTML i CSS, em centro a crear dissenys atractius i responsius. Tinc un nivell mitjà en Javascript per a la interacció amb l'usuari i utilitzo Python per a tasques més complexes. També tinc experiència amb bases de dades com Oracle i MySQL per gestionar informació de manera eficient.</p>
+    <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-blue-600">Sobre Mi</h3>
+    <div class="flex flex-col md:flex-row justify-center items-center">
+      <div class="w-full md:w-2/5 mb-8 md:mb-0 flex justify-center">
+        <img src="public/avatar.png" alt="Imatge de perfil" class="rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105" />
+      </div>
+      <div class="w-full md:w-3/5 text-center md:text-left">
+        <p class="text-gray-700 text-base md:text-lg mb-4 md:mb-6">Sóc un professional amb experiència tant en programació web com en instal·lació i manteniment d'equips i servidors.</p>
+        <p class="text-gray-700 text-base md:text-lg mb-4 md:mb-6">Tinc estudis en SMX (Sistemes Microinformàtics en Xarxa) i ASIX (Administració de Sistemes Informàtics en Xarxa, perfil de ciberseguretat). A més, m'he especialitzat en desenvolupament d'aplicacions multiplataforma amb el cicle superior de DAM, que és la meva àrea d'especialització i el que més vull potenciar professionalment.</p>
+        <p class="text-gray-700 text-base md:text-lg mb-4 md:mb-6">Amb un alt domini d'HTML i CSS, em centro a crear dissenys atractius i responsius. Tinc un nivell mitjà en Javascript per a la interacció amb l'usuari i utilitzo Python per a tasques més complexes. També tinc experiència amb bases de dades com Oracle i MySQL per gestionar informació de manera eficient.</p>
       </div>
     </div>
   </div>
 </section>
 
+
+
 <!-- Habilitats Section -->
-<section id="skills" class="bg-white py-20" data-aos="fade-up">
-  <div class="container mx-auto">
-    <h3 class="text-3xl font-bold text-center mb-12">Les Meves Habilitats</h3>
-    <div class="flex flex-wrap justify-center gap-6"> <!-- Añadido gap-6 -->
+<section id="skills" class="scroll-mt-20 bg-white py-10 md:py-20" data-aos="fade-up">
+  <div class="container mx-auto px-4">
+    <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Les Meves Habilitats</h3>
+    <div class="flex flex-wrap justify-center gap-6"> <!-- Mantingut gap-6 -->
       <!-- Skill 1: HTML & CSS -->
-      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-8" data-aos="zoom-in">
+      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-6" data-aos="zoom-in">
         <div class="bg-black bg-opacity-20 p-6 rounded-lg">
           <div class="flex justify-center items-center">
             <img src="public/html_css.png" alt="html_css" class="max-w-full h-auto" style="max-width: 140px;">
@@ -97,7 +107,7 @@
         </div>
       </div>
       <!-- Skill 2: Javascript -->
-      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-8" data-aos="zoom-in">
+      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-6" data-aos="zoom-in">
         <div class="bg-black bg-opacity-20 p-6 rounded-lg">
           <div class="flex justify-center items-center">
             <img src="public/javascript.png" alt="javascript" class="max-w-full h-auto" style="max-width: 140px;">
@@ -107,7 +117,7 @@
         </div>
       </div>
       <!-- Skill 3: Python -->
-      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-8" data-aos="zoom-in">
+      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-6" data-aos="zoom-in">
         <div class="bg-black bg-opacity-20 p-6 rounded-lg">
           <div class="flex justify-center items-center">
             <img src="public/python.png" alt="python" class="max-w-full h-auto" style="max-width: 140px;">
@@ -117,7 +127,7 @@
         </div>
       </div>
       <!-- Skill 4: Bases de Dades -->
-      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-8" data-aos="zoom-in">
+      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-6" data-aos="zoom-in">
         <div class="bg-black bg-opacity-20 p-6 rounded-lg">
           <div class="text-red-500 text-6xl mb-4">
             &#128202;
@@ -127,7 +137,7 @@
         </div>
       </div>
       <!-- Skill 5: Instal·lació i Manteniment d'Equips -->
-      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-8" data-aos="zoom-in">
+      <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-6" data-aos="zoom-in">
         <div class="bg-black bg-opacity-20 p-6 rounded-lg">
           <div class="text-indigo-500 text-6xl mb-4">
             &#128187;
@@ -140,8 +150,9 @@
   </div>
 </section>
 
+
 <!-- Secció de Plans -->
-<section id="plans" class="bg-white py-20" data-aos="fade-up">
+<section id="plans" class="scroll-mt-20 bg-white py-20" data-aos="fade-up">
   <div class="container mx-auto">
     <h3 class="text-3xl font-bold text-center mb-12">Els Meus Plans</h3>
     <div class="flex flex-wrap justify-center">
@@ -189,20 +200,125 @@
   </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="bg-gray-100 py-20" data-aos="fade-up">
+<!-- FAQ Section -->
+<section id="preguntes" class="scroll-mt-20 bg-white py-20" data-aos="fade-up">
   <div class="container mx-auto">
-    <h3 class="text-3xl font-bold text-center mb-12">Contacte'm</h3>
+    <h3 class="text-3xl font-bold text-center mb-8 text-blue-600">Preguntes Frequents</h3>
+    <div class="space-y-4">
+      <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+        <div class="flex justify-between items-center cursor-pointer" data-toggle="faq1">
+          <h4 class="text-xl font-semibold mb-2">Quin tipus de serveis ofereixes?</h4>
+          <span class="text-xl font-semibold mb-2 text-blue-600">+</span>
+        </div>
+        <p class="text-gray-700 hidden">Ofereixo serveis de desenvolupament web, incloent disseny de llocs web, manteniment i programació d'aplicacions personalitzades.</p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+        <div class="flex justify-between items-center cursor-pointer" data-toggle="faq2">
+          <h4 class="text-xl font-semibold mb-2">Quin és el teu temps de resposta?</h4>
+          <span class="text-xl font-semibold mb-2 text-blue-600">+</span>
+        </div>
+        <p class="text-gray-700 hidden">Normalment, responc a tots els correus electrònics i missatges en un termini de 24 hores. Si és urgent, pots marcar-ho i faré el possible per respondre més ràpidament.</p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+        <div class="flex justify-between items-center cursor-pointer" data-toggle="faq3">
+          <h4 class="text-xl font-semibold mb-2">Ofereixes suport tècnic després del lliurament?</h4>
+          <span class="text-xl font-semibold mb-2 text-blue-600">+</span>
+        </div>
+        <p class="text-gray-700 hidden">Sí, ofereixo suport tècnic per ajudar-te amb qualsevol problema que puguis tenir després de la finalització del projecte.</p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+        <div class="flex justify-between items-center cursor-pointer" data-toggle="faq4">
+          <h4 class="text-xl font-semibold mb-2">Com puc sol·licitar un pressupost?</h4>
+          <span class="text-xl font-semibold mb-2 text-blue-600">+</span>
+        </div>
+        <p class="text-gray-700 hidden">Pots omplir el formulari de contacte al meu lloc web o enviar-me un correu electrònic amb els detalls del teu projecte.</p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+        <div class="flex justify-between items-center cursor-pointer" data-toggle="faq5">
+          <h4 class="text-xl font-semibold mb-2">Quin és el procés de treball?</h4>
+          <span class="text-xl font-semibold mb-2 text-blue-600">+</span>
+        </div>
+        <p class="text-gray-700 hidden">El procés comença amb una reunió inicial per entendre les teves necessitats, seguida de la creació de prototips i, finalment, el desenvolupament i l'implementació.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Client Reviews Section -->
+<section id="opinions" class="scroll-mt-20 bg-white py-20" data-aos="fade-up">
+  <div class="container mx-auto">
+    <h3 class="text-3xl font-bold text-center mb-8 text-blue-600">Opinions dels Clients</h3>
+    <div class="flex flex-wrap justify-center gap-6">
+      <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
+        <div class="bg-gray-100 rounded-lg p-6 shadow-lg transition-transform duration-300 hover:shadow-xl">
+          <p class="text-gray-700 mb-4">"Steven va fer un treball increïble en el meu lloc web! Va superar les meves expectatives i va ser molt professional." <br>- Harvey G.</p>
+          <div class="flex items-center mt-4">
+            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Client" class="w-10 h-10 rounded-full mr-2">
+            <span class="font-semibold">Harvey G.</span>
+          </div>
+        </div>
+      </div>
+      <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
+        <div class="bg-gray-100 rounded-lg p-6 shadow-lg transition-transform duration-300 hover:shadow-xl">
+          <p class="text-gray-700 mb-4">"Estic molt content amb el resultat final. El suport tècnic ha estat excel·lent!" <br>- Mihai-Sebastian B.</p>
+          <div class="flex items-center mt-4">
+            <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Client" class="w-10 h-10 rounded-full mr-2">
+            <span class="font-semibold">Mihai-Sebastian B.</span>
+          </div>
+        </div>
+      </div>
+      <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
+        <div class="bg-gray-100 rounded-lg p-6 shadow-lg transition-transform duration-300 hover:shadow-xl">
+          <p class="text-gray-700 mb-4">"Una experiència molt positiva. Altament recomanable!" <br>- Octavian M.</p>
+          <div class="flex items-center mt-4">
+            <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Client" class="w-10 h-10 rounded-full mr-2">
+            <span class="font-semibold">Octavian M.</span>
+          </div>
+        </div>
+      </div>
+      <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
+        <div class="bg-gray-100 rounded-lg p-6 shadow-lg transition-transform duration-300 hover:shadow-xl">
+          <p class="text-gray-700 mb-4">"El servei va ser excepcional i el disseny del meu lloc web és exactament el que volia!" <br>- Ana R.</p>
+          <div class="flex items-center mt-4">
+            <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Client" class="w-10 h-10 rounded-full mr-2">
+            <span class="font-semibold">Ana R.</span>
+          </div>
+        </div>
+      </div>
+      <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
+        <div class="bg-gray-100 rounded-lg p-6 shadow-lg transition-transform duration-300 hover:shadow-xl">
+          <p class="text-gray-700 mb-4">"Molt satisfet amb el suport i la comunicació durant tot el projecte." <br>- Raul F.</p>
+          <div class="flex items-center mt-4">
+            <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Client" class="w-10 h-10 rounded-full mr-2">
+            <span class="font-semibold">Raul F.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="bg-gray-100 py-10 md:py-20" data-aos="fade-up">
+  <div class="container mx-auto px-4">
+    <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Contacte'm</h3>
     <form action="#" method="POST" class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
-      <div class="mb-4">
+      <div class="mb-6">
         <label for="name" class="block text-gray-700">Nom:</label>
         <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded" required>
       </div>
-      <div class="mb-4">
+      <div class="mb-6">
         <label for="email" class="block text-gray-700">Correu electrònic:</label>
         <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded" required>
       </div>
-      <div class="mb-4">
+      <div class="mb-6">
         <label for="message" class="block text-gray-700">Missatge:</label>
         <textarea id="message" name="message" rows="4" class="w-full p-2 border border-gray-300 rounded" required></textarea>
       </div>
@@ -211,39 +327,38 @@
   </div>
 </section>
 
+
 <!-- Footer -->
 <footer class="bg-gray-800 text-white py-10">
-  <div class="container mx-auto flex justify-between items-center">
-    <!-- Secció sobre mi (a l'esquerra) -->
-    <div class="w-full md:w-1/2 text-left mb-6 md:mb-0">
-      <h4 class="text-xl font-bold mb-4">Sobre Mi</h4>
-      <p class="text-gray-400">
-        Sóc Steven, un programador web apassionat per la creació de llocs web dinàmics i atractius. Amb experiència en HTML, CSS, Javascript, Python i bases de dades, m'especialitzo en oferir solucions tecnològiques efectives. Sempre busco nous reptes per millorar les meves habilitats.
-      </p>
-    </div>
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between items-start">
+      <!-- Secció sobre mi (a l'esquerra) -->
+      <div class="w-full md:w-1/2 text-left mb-6 md:mb-0">
+        <h4 class="text-xl font-bold mb-4">Sobre Mi</h4>
+        <p class="text-gray-400">
+          Sóc Steven, un programador web apassionat per la creació de llocs web dinàmics i atractius. Amb experiència en HTML, CSS, Javascript, Python i bases de dades, m'especialitzo en oferir solucions tecnològiques efectives. Sempre busco nous reptes per millorar les meves habilitats.
+        </p>
+      </div>
 
-    <!-- Secció de xarxes socials (a la dreta) -->
-    <div class="w-full md:w-1/2 text-right">
-      <h4 class="text-xl font-bold mb-4">Segueix-me a les Xarxes Socials</h4>
-      <div class="flex justify-end space-x-6">
-        <a href="https://www.linkedin.com/in/steven-romero-6a72b820b/" target="_blank" class="text-gray-400 hover:text-white">
-          <img src="public/linkedin-icon.png" alt="LinkedIn" class="w-6 h-6 inline-block">
-        </a>
-        <a href="https://github.com/ManuelSteven21" target="_blank" class="text-gray-400 hover:text-white">
-          <img src="public/github-icon.png" alt="GitHub" class="w-6 h-6 inline-block">
-        </a>
-        <a href="https://x.com/steven_21_2004" target="_blank" class="text-gray-400 hover:text-white">
-          <img src="public/twitter-icon.png" alt="Twitter" class="w-6 h-6 inline-block">
-        </a>
+      <!-- Secció de xarxes socials (a la dreta) -->
+      <div class="w-full md:w-1/2 text-left md:text-right">
+        <h4 class="text-xl font-bold mb-4">Segueix-me a les Xarxes Socials</h4>
+        <div class="flex justify-start md:justify-end space-x-6">
+          <a href="https://www.linkedin.com/in/steven-romero-6a72b820b/" target="_blank" class="text-gray-400 hover:text-white">
+            <img src="public/linkedin-icon.png" alt="LinkedIn" class="w-6 h-6 inline-block">
+          </a>
+          <a href="https://github.com/ManuelSteven21" target="_blank" class="text-gray-400 hover:text-white">
+            <img src="public/github-icon.png" alt="GitHub" class="w-6 h-6 inline-block">
+          </a>
+          <a href="https://x.com/steven_21_2004" target="_blank" class="text-gray-400 hover:text-white">
+            <img src="public/twitter-icon.png" alt="Twitter" class="w-6 h-6 inline-block">
+          </a>
+        </div>
       </div>
     </div>
   </div>
-
-  <!-- Copyright -->
-  <div class="mt-6 text-center">
-    <p class="text-gray-500">© 2024 Steven - Tots els drets reservats.</p>
-  </div>
 </footer>
+
 
 
 
