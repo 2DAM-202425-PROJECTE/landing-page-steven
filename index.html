@@ -100,7 +100,7 @@
     <div class="flex flex-wrap justify-center gap-6"> <!-- Mantingut gap-6 -->
       <!-- Skill 1: HTML & CSS -->
       <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-6" data-aos="zoom-in">
-        <div class="bg-black bg-opacity-20 p-6 rounded-lg">
+        <div class="bg-black bg-opacity-10 p-6 rounded-lg">
           <div class="flex justify-center items-center">
             <img src="public/html_css.png" alt="html_css" class="h-24 w-auto"> <!-- Fixem l'alçada -->
           </div>
@@ -110,7 +110,7 @@
       </div>
       <!-- Skill 2: Javascript -->
       <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-6" data-aos="zoom-in">
-        <div class="bg-black bg-opacity-20 p-6 rounded-lg">
+        <div class="bg-black bg-opacity-10 p-6 rounded-lg">
           <div class="flex justify-center items-center">
             <img src="public/javascript.png" alt="javascript" class="h-24 w-auto">
           </div>
@@ -120,7 +120,7 @@
       </div>
       <!-- Skill 3: Python -->
       <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-6" data-aos="zoom-in">
-        <div class="bg-black bg-opacity-20 p-6 rounded-lg">
+        <div class="bg-black bg-opacity-10 p-6 rounded-lg">
           <div class="flex justify-center items-center">
             <img src="public/python.png" alt="python" class="h-24 w-auto">
           </div>
@@ -130,7 +130,7 @@
       </div>
       <!-- Skill 4: Bases de Dades -->
       <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-6" data-aos="zoom-in">
-        <div class="bg-black bg-opacity-20 p-6 rounded-lg">
+        <div class="bg-black bg-opacity-10 p-6 rounded-lg">
           <div class="text-red-500 text-6xl mb-4">
             &#128202;
           </div>
@@ -140,7 +140,7 @@
       </div>
       <!-- Skill 5: Instal·lació i Manteniment d'Equips -->
       <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-6" data-aos="zoom-in">
-        <div class="bg-black bg-opacity-20 p-6 rounded-lg">
+        <div class="bg-black bg-opacity-10 p-6 rounded-lg">
           <div class="text-indigo-500 text-6xl mb-4">
             &#128187;
           </div>
@@ -339,7 +339,6 @@
   </div>
 </section>
 
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
 <!-- Contact Section -->
 <section id="contact" class="bg-gray-100 py-10 md:py-20" data-aos="fade-up">
@@ -362,7 +361,6 @@
     </form>
   </div>
 </section>
-
 
 
 <!-- Footer -->
@@ -396,6 +394,40 @@
   </div>
 </footer>
 
+<!-- Cookie Banner -->
+<div id="cookieBanner" class="fixed top-0 left-0 w-full bg-gray-800 text-white flex justify-between items-center p-4 shadow-lg z-50 hidden">
+  <div class="flex items-center">
+    <p class="text-sm mr-4">Utilitzem cookies per millorar la teva experiència. Acceptes el nostre <a href="/privacy-policy" class="underline">avis de privacitat</a>?</p>
+    <div class="flex items-center mr-4">
+      <span class="mr-2">Cookies Necessàries</span>
+      <label class="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" id="necessaryCookies" checked disabled class="sr-only">
+        <div class="toggle bg-gray-300 w-10 h-4 rounded-full"></div>
+        <span class="ball absolute w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-200 ease-in-out"></span>
+      </label>
+    </div>
+    <div class="flex items-center mr-4">
+      <span class="mr-2">Cookies d'Analítica</span>
+      <label class="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" id="analyticsCookies" class="sr-only" onchange="toggleCookies(this)">
+        <div class="toggle bg-gray-300 w-10 h-4 rounded-full"></div>
+        <span class="ball absolute w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-200 ease-in-out"></span>
+      </label>
+    </div>
+    <div class="flex items-center">
+      <span class="mr-2">Cookies de Màrqueting</span>
+      <label class="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" id="marketingCookies" class="sr-only" onchange="toggleCookies(this)">
+        <div class="toggle bg-gray-300 w-10 h-4 rounded-full"></div>
+        <span class="ball absolute w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-200 ease-in-out"></span>
+      </label>
+    </div>
+  </div>
+  <button id="acceptCookies" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">Acceptar</button>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
 <script type="module" src="/main.js"></script>
 </body>
