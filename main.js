@@ -22,3 +22,18 @@ document.querySelectorAll('[data-toggle]').forEach(item => {
 });
 
 
+(function(){
+    emailjs.init("OBqXgrR0fs5ostHMu"); // Substitueix YOUR_USER_ID pel teu User ID d'EmailJS
+})();
+
+// Funció per enviar el formulari
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Evita l'enviament per defecte del formulari
+
+    emailjs.sendForm('service_bfmkhjk', 'template_k0siyva', this)
+        .then(function() {
+            alert("Missatge enviat amb èxit!");
+        }, function(error) {
+            alert("Error al enviar el missatge: " + JSON.stringify(error));
+        });
+});
