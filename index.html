@@ -15,8 +15,8 @@
 
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
 <!-- Header -->
-<header class="bg-gray-800 text-white" x-data="{ menuOpen: false }">
-  <div class="container mx-auto flex justify-between items-center py-6 px-4 sm:px-6 lg:px-8">
+<header class="bg-black text-white" x-data="{ menuOpen: false } ">
+  <div class="container mx-auto flex justify-between items-center py-6 px-4 sm:px-6 lg:px-8 font-bold">
     <div class="w-20 h-10">
       <a href="#intro"><img src="public/steven.png" alt="Logo"></a>
     </div>
@@ -40,52 +40,53 @@
 
     <!-- Menú de navegació (desktop) -->
     <nav class="hidden lg:flex">
-      <a href="#about" class="mx-4 text-gray-400 hover:text-white">Sobre mi</a>
-      <a href="#skills" class="mx-4 text-gray-400 hover:text-white">Habilitats</a>
-      <a href="#plans" class="mx-4 text-gray-400 hover:text-white">Plans</a>
-      <a href="#preguntes" class="mx-4 text-gray-400 hover:text-white">Preguntes</a>
-      <a href="#opinions" class="mx-4 text-gray-400 hover:text-white">Opinions</a>
-      <a href="#contact" class="mx-4 text-gray-400 hover:text-white">Contacte</a>
+      <a href="#about" class="mx-4 text-gray-300 hover:text-red-500">Sobre mi</a>
+      <a href="#skills" class="mx-4 text-gray-300 hover:text-red-500">Habilitats</a>
+      <a href="#plans" class="mx-4 text-gray-300 hover:text-red-500">Plans</a>
+      <a href="#preguntes" class="mx-4 text-gray-300 hover:text-red-500">Preguntes</a>
+      <a href="#opinions" class="mx-4 text-gray-300 hover:text-red-500">Opinions</a>
+      <a href="#contact" class="mx-4 text-gray-300 hover:text-red-500">Contacte</a>
     </nav>
 
     <!-- Menú desplegable (mòbil) -->
-    <div x-show="menuOpen" @click.away="menuOpen = false" class="lg:hidden absolute top-16 left-0 w-full bg-gray-800 shadow-lg z-10">
+    <div x-show="menuOpen" @click.away="menuOpen = false" class="lg:hidden absolute top-16 left-0 w-full bg-black shadow-lg z-10">
       <nav class="flex flex-col items-center py-4 space-y-4">
-        <a href="#about" class="text-gray-400 hover:text-white" @click="menuOpen = false">Sobre mi</a>
-        <a href="#skills" class="text-gray-400 hover:text-white" @click="menuOpen = false">Habilitats</a>
-        <a href="#plans" class="text-gray-400 hover:text-white" @click="menuOpen = false">Plans</a>
-        <a href="#preguntes" class="text-gray-400 hover:text-white" @click="menuOpen = false">Preguntes</a>
-        <a href="#opinions" class="text-gray-400 hover:text-white" @click="menuOpen = false">Opinions</a>
-        <a href="#contact" class="text-gray-400 hover:text-white" @click="menuOpen = false">Contacte</a>
+        <a href="#about" class="text-gray-300 hover:text-red-500" @click="menuOpen = false">Sobre mi</a>
+        <a href="#skills" class="text-gray-300 hover:text-red-500" @click="menuOpen = false">Habilitats</a>
+        <a href="#plans" class="text-gray-300 hover:text-red-500" @click="menuOpen = false">Plans</a>
+        <a href="#preguntes" class="text-gray-300 hover:text-red-500" @click="menuOpen = false">Preguntes</a>
+        <a href="#opinions" class="text-gray-300 hover:text-red-500" @click="menuOpen = false">Opinions</a>
+        <a href="#contact" class="text-gray-300 hover:text-red-500" @click="menuOpen = false">Contacte</a>
       </nav>
     </div>
   </div>
 </header>
 
+
 <!-- Hero Section -->
-<section class="bg-cover bg-center py-20"  style="background-image: url(public/portada.jpg)" data-aos="fade-up">
+<section class="bg-cover bg-center py-20" style="background-image: url(public/portada.jpg)" data-aos="fade-up">
   <div class="container mx-auto px-4 sm:px-6">
-  <div class="container mx-auto text-center text-white bg-black bg-opacity-50 p-10 sm:p-12 md:p-16 lg:p-20 rounded-lg  mx-auto px-4 sm:px-6">
-    <h2 class="text-4xl font-bold mb-6">Programador Web Creatiu i Dinàmic</h2>
-    <p class="text-lg mb-6">Tinc un alt coneixement d'HTML i CSS, així com un nivell mitjà en Javascript i Python. A més, estic especialitzat en bases de dades com Oracle i MySQL.</p>
-    <a href="#contact" class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 transition duration-300">Contacta'm</a>
-  </div>
+    <div class="text-center text-white bg-black bg-opacity-75 p-10 sm:p-12 md:p-16 lg:p-20 rounded-lg">
+      <h2 class="text-4xl font-bold mb-6">Programador Web Creatiu i Dinàmic</h2>
+      <p class="text-lg mb-6">Tinc un alt coneixement d'HTML i CSS, així com un nivell mitjà en Javascript i Python. A més, estic especialitzat en bases de dades com Oracle i MySQL.</p>
+      <a href="#contact" class="bg-red-600 text-white py-2 px-6 rounded-full hover:bg-red-700 transition duration-300">Contacta'm</a>
+    </div>
   </div>
 </section>
 
 
 <!-- Sobre Mi Section -->
-<section id="about" class="scroll-mt-20 bg-gray-100 py-10 md:py-20 px-4 md:px-0" data-aos="fade-right">
+<section id="about" class="scroll-mt-20 bg-gray-800 py-10 md:py-20 px-4 md:px-0" data-aos="fade-right">
   <div class="container mx-auto">
-    <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-blue-600">Sobre Mi</h3>
+    <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-white">SOBRE MI</h3>
     <div class="flex flex-col md:flex-row justify-center items-center">
       <div class="w-full md:w-2/5 mb-8 md:mb-0 flex justify-center">
         <img src="public/avatar.png" alt="Imatge de perfil" class="rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105" />
       </div>
       <div class="w-full md:w-3/5 text-center md:text-left">
-        <p class="text-gray-700 text-base md:text-lg mb-4 md:mb-6">Sóc un professional amb experiència tant en programació web com en instal·lació i manteniment d'equips i servidors.</p>
-        <p class="text-gray-700 text-base md:text-lg mb-4 md:mb-6">Tinc estudis en SMX (Sistemes Microinformàtics en Xarxa) i ASIX (Administració de Sistemes Informàtics en Xarxa, perfil de ciberseguretat). A més, m'he especialitzat en desenvolupament d'aplicacions multiplataforma amb el cicle superior de DAM, que és la meva àrea d'especialització i el que més vull potenciar professionalment.</p>
-        <p class="text-gray-700 text-base md:text-lg mb-4 md:mb-6">Amb un alt domini d'HTML i CSS, em centro a crear dissenys atractius i responsius. Tinc un nivell mitjà en Javascript per a la interacció amb l'usuari i utilitzo Python per a tasques més complexes. També tinc experiència amb bases de dades com Oracle i MySQL per gestionar informació de manera eficient.</p>
+        <p class="text-white text-base md:text-lg mb-4 md:mb-6">Sóc un professional amb experiència tant en programació web com en instal·lació i manteniment d'equips i servidors.</p>
+        <p class="text-white text-base md:text-lg mb-4 md:mb-6">Tinc estudis en SMX (Sistemes Microinformàtics en Xarxa) i ASIX (Administració de Sistemes Informàtics en Xarxa, perfil de ciberseguretat). A més, m'he especialitzat en desenvolupament d'aplicacions multiplataforma amb el cicle superior de DAM, que és la meva àrea d'especialització i el que més vull potenciar professionalment.</p>
+        <p class="text-white text-base md:text-lg mb-4 md:mb-6">Amb un alt domini d'HTML i CSS, em centro a crear dissenys atractius i responsius. Tinc un nivell mitjà en Javascript per a la interacció amb l'usuari i utilitzo Python per a tasques més complexes. També tinc experiència amb bases de dades com Oracle i MySQL per gestionar informació de manera eficient.</p>
       </div>
     </div>
   </div>
@@ -161,29 +162,30 @@
       <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-6">
         <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex flex-col items-center">
           <img src="public/projecte1.jpg" alt="Projecte 1" class="h-40 w-auto mb-4 rounded-md object-contain">
-          <h4 class="text-xl font-bold mb-2">Nom del Projecte 1</h4>
-          <p class="text-gray-700 mb-4">Descripció breu del projecte que destaca les seves característiques principals.</p>
+          <h4 class="text-xl font-bold mb-2">Plataforma de Gestió de Projectes</h4>
+          <p class="text-gray-700 mb-4">Desenvolupament d'una plataforma per a la gestió i seguiment de projectes en equip, integrant eines de col·laboració i report d'estats en temps real. Aquest projecte destaca per la seva interfície intuïtiva i adaptable a diferents tipus d'usuaris.</p>
         </div>
       </div>
       <!-- Projecte 2 -->
       <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-6">
         <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex flex-col items-center">
           <img src="public/projecte2.jpg" alt="Projecte 2" class="h-40 w-auto mb-4 rounded-md object-contain">
-          <h4 class="text-xl font-bold mb-2">Nom del Projecte 2</h4>
-          <p class="text-gray-700 mb-4">Descripció breu del projecte que destaca les seves característiques principals.</p>
+          <h4 class="text-xl font-bold mb-2">Eina de Comunicació Empresarial</h4>
+          <p class="text-gray-700 mb-4">Creació d'una plataforma de comunicació empresarial, dissenyada per optimitzar la col·laboració entre equips de treball. Aquesta eina facilita la integració d'aplicacions de tercers i permet la comunicació fluida en entorns corporatius.</p>
         </div>
       </div>
       <!-- Projecte 3 -->
       <div class="w-full sm:w-1/2 lg:w-1/4 text-center mb-6">
         <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex flex-col items-center">
           <img src="public/projecte3.jpg" alt="Projecte 3" class="h-40 w-auto mb-4 rounded-md object-contain">
-          <h4 class="text-xl font-bold mb-2">Nom del Projecte 3</h4>
-          <p class="text-gray-700 mb-4">Descripció breu del projecte que destaca les seves característiques principals.</p>
+          <h4 class="text-xl font-bold mb-2">Plataforma de Receptes Culinàries</h4>
+          <p class="text-gray-700 mb-4">Desenvolupament d'un lloc web interactiu per compartir i descobrir receptes culinàries. Aquesta plataforma inclou un cercador avançat, filtres personalitzats i una interfície fàcil d'usar per a cuiners professionals i amateurs.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 
 
@@ -236,6 +238,10 @@
   </div>
 </section>
 
+<div class="bg-white py-20">
+  <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
+</div>
+
 <!-- FAQ Section -->
 <section id="preguntes" class="scroll-mt-20 bg-white py-20" data-aos="fade-up">
   <div class="container mx-auto">
@@ -284,6 +290,9 @@
   </div>
 </section>
 
+<div class="bg-white py-20">
+  <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
+</div>
 
 <!-- Client Reviews Section -->
 <section id="opinions" class="scroll-mt-20 bg-white py-20" data-aos="fade-up">
@@ -394,37 +403,68 @@
   </div>
 </footer>
 
-<!-- Cookie Banner -->
-<div id="cookieBanner" class="fixed top-0 left-0 w-full bg-gray-800 text-white flex justify-between items-center p-4 shadow-lg z-50 hidden">
-  <div class="flex items-center">
-    <p class="text-sm mr-4">Utilitzem cookies per millorar la teva experiència. Acceptes el nostre <a href="/privacy-policy" class="underline">avis de privacitat</a>?</p>
-    <div class="flex items-center mr-4">
-      <span class="mr-2">Cookies Necessàries</span>
-      <label class="relative inline-flex items-center cursor-pointer">
-        <input type="checkbox" id="necessaryCookies" checked disabled class="sr-only">
-        <div class="toggle bg-gray-300 w-10 h-4 rounded-full"></div>
-        <span class="ball absolute w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-200 ease-in-out"></span>
-      </label>
+<!-- Secció de cookies -->
+<div id="cookie-consent" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-100 bg-opacity-80 hidden">
+  <section class="max-w-md p-4 bg-white border border-gray-300 shadow-lg rounded-2xl">
+    <h2 class="font-semibold text-gray-800">🍪 Utilitzem cookies!</h2>
+
+    <p class="mt-4 text-sm text-gray-700">Hola, aquest lloc web utilitza cookies essencials per assegurar el seu correcte funcionament i cookies de seguiment per entendre com interactues amb ell. Aquestes últimes només s'activaran amb el teu consentiment.</p>
+
+    <p class="mt-3 text-sm text-gray-600">Si tanques aquest modal, es guardaran les opcions predeterminades.</p>
+
+    <div class="grid grid-cols-2 gap-4 mt-4 shrink-0">
+      <button id="accept-cookies" class="text-xs bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+        Acceptar totes
+      </button>
+
+      <button id="reject-cookies" class="text-xs border border-red-500 hover:bg-red-500 hover:text-white font-medium rounded-lg px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+        Rebutjar totes
+      </button>
+
+      <button id="preferences-cookies" class="text-xs border border-yellow-500 hover:bg-yellow-500 hover:text-white font-medium rounded-lg px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+        Preferències
+      </button>
+
+      <button id="close-cookies" class="text-xs border text-gray-800 hover:bg-gray-100 font-medium rounded-lg px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+        Tancar
+      </button>
     </div>
-    <div class="flex items-center mr-4">
-      <span class="mr-2">Cookies d'Analítica</span>
-      <label class="relative inline-flex items-center cursor-pointer">
-        <input type="checkbox" id="analyticsCookies" class="sr-only" onchange="toggleCookies(this)">
-        <div class="toggle bg-gray-300 w-10 h-4 rounded-full"></div>
-        <span class="ball absolute w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-200 ease-in-out"></span>
-      </label>
-    </div>
-    <div class="flex items-center">
-      <span class="mr-2">Cookies de Màrqueting</span>
-      <label class="relative inline-flex items-center cursor-pointer">
-        <input type="checkbox" id="marketingCookies" class="sr-only" onchange="toggleCookies(this)">
-        <div class="toggle bg-gray-300 w-10 h-4 rounded-full"></div>
-        <span class="ball absolute w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-200 ease-in-out"></span>
-      </label>
-    </div>
-  </div>
-  <button id="acceptCookies" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">Acceptar</button>
+  </section>
 </div>
+
+<!-- Modal de preferències de cookies -->
+<div id="preferences-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-100 bg-opacity-80 hidden">
+  <section class="max-w-md p-4 bg-white border border-gray-300 shadow-lg rounded-2xl">
+    <h2 class="font-semibold text-gray-800">Selecciona les teves preferències de cookies</h2>
+
+    <p class="mt-2 text-sm text-gray-700">Tria quins tipus de cookies vols acceptar:</p>
+
+    <div class="mt-4">
+      <label class="block">
+        <input type="checkbox" id="essential-cookies" checked disabled>
+        <span class="ml-2">Cookies Essencials (Necessàries)</span>
+      </label>
+      <label class="block">
+        <input type="checkbox" id="tracking-cookies">
+        <span class="ml-2">Cookies de Seguiment</span>
+      </label>
+      <label class="block">
+        <input type="checkbox" id="functional-cookies">
+        <span class="ml-2">Cookies Funcionals</span>
+      </label>
+    </div>
+
+    <div class="mt-4 flex justify-end">
+      <button id="save-preferences" class="text-xs bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+        Guardar preferències
+      </button>
+      <button id="close-preferences" class="text-xs border text-gray-800 hover:bg-gray-100 font-medium rounded-lg px-4 py-2.5 duration-300 transition-colors focus:outline-none ml-2">
+        Tancar
+      </button>
+    </div>
+  </section>
+</div>
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
