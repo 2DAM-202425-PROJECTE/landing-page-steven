@@ -50,22 +50,89 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         });
 });
 
-// Comprovar si les cookies ja han estat acceptades
-if (localStorage.getItem("cookiesAccepted") !== "true") {
-    document.getElementById("cookieBanner").classList.remove("hidden"); // Mostrar l'avís
-}
-
-// Gestió del botó d'acceptació
-document.getElementById("acceptCookies").addEventListener("click", function() {
-    localStorage.setItem("cookiesAccepted", "true"); // Guardar l'acceptació en localStorage
-    document.getElementById("cookieBanner").classList.add("hidden"); // Amagar l'avís
-});
-
-// Funció per gestionar les opcions de cookies
-function toggleCookies(checkbox) {
-    if (checkbox.checked) {
-        checkbox.nextElementSibling.style.backgroundColor = "#34D399"; // Verd
+// Funció per detectar mode incògnit
+function detectIncognitoMode(callback) {
+    const fs = window.RequestFileSystem || window.webkitRequestFileSystem;
+    if (!fs) {
+        callback(false); // Si no és incògnit
     } else {
-        checkbox.nextElementSibling.style.backgroundColor = "#gray"; // Grís
+        fs(window.TEMPORARY, 100, () => callback(false), () => callback(true)); // Si és incògnit
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cookieConsent = document.getElementById('cookie-consent');
+    const preferencesModal = document.getElementById('preferences-modal');
+    const acceptButton = document.getElementById('accept-cookies');
+    const rejectButton = document.getElementById('reject-cookies');
+    const closeButton = document.getElementById('close-cookies');
+    const preferencesButton = document.getElementById('preferences-cookies');
+    const closePreferencesButton = document.getElementById('close-preferences');
+    const savePreferencesButton = document.getElementById('save-preferences');
+
+    // Funció per mostrar el consentiment de cookies
+    const showCookieConsent = () => {
+        cookieConsent.classList.remove('hidden');
+    };
+
+    // Comprovar consentiment de cookies
+    const checkCookieConsent = () => {
+        const cookieAccepted = localStorage.getItem('cookieAccepted');
+        detectIncognitoMode(isIncognito => {
+            if (isIncognito || !cookieAccepted) {
+                showCookieConsent(); // Sempre mostra el consentiment si és incògnit
+            }
+        });
+    };
+
+    checkCookieConsent();
+
+    // Acceptar cookies
+    acceptButton.addEventListener('click', () => {
+        localStorage.setItem('cookieAccepted', 'true');
+        console.log("Cookies accepted");
+        cookieConsent.classList.add('hidden');
+    });
+
+    // Rebutjar cookies
+    rejectButton.addEventListener('click', () => {
+        localStorage.setItem('cookieAccepted', 'false');
+        console.log("Cookies rejected");
+        cookieConsent.classList.add('hidden');
+    });
+
+    // Tancar modal de cookies
+    closeButton.addEventListener('click', () => {
+        cookieConsent.classList.add('hidden');
+    });
+
+    // Obrir modal de preferències
+    preferencesButton.addEventListener('click', () => {
+        cookieConsent.classList.add('hidden');
+        preferencesModal.classList.remove('hidden');
+    });
+
+    // Tancar modal de preferències
+    closePreferencesButton.addEventListener('click', () => {
+        preferencesModal.classList.add('hidden');
+    });
+
+    // Desar preferències
+    savePreferencesButton.addEventListener('click', () => {
+        const trackingCookiesAccepted = document.getElementById('tracking-cookies').checked;
+        const functionalCookiesAccepted = document.getElementById('functional-cookies').checked;
+
+        // Guardem les preferències
+        localStorage.setItem('trackingCookies', trackingCookiesAccepted);
+        localStorage.setItem('functionalCookies', functionalCookiesAccepted);
+
+        console.log("Preferences saved:", {
+            trackingCookies: trackingCookiesAccepted,
+            functionalCookies: functionalCookiesAccepted,
+        });
+
+        // Acceptem les preferències i tancar el modal
+        localStorage.setItem('cookieAccepted', 'true');
+        preferencesModal.classList.add('hidden');
+    });
+});
